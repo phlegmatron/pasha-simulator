@@ -1,0 +1,47 @@
+body {
+	background-image: url('../img/background.jpg');
+	min-width: 600px;
+}
+
+.wrapper {
+	position: relative;
+	width: 700px;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: end;
+}
+
+.playButton {
+	position: absolute;
+	top: 150px;
+	left: 200px;
+	border: none;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color: yellow;
+	font-size: 25px;
+	animation-name: button-animation;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+.playButton:hover {
+	cursor: pointer;
+}
+
+.playButton:focus {
+	outline: none;
+}
+
+@keyframes button-animation {
+	0% {
+		transform: scale(1, 1)
+	}
+	50% {
+		transform: scale(1.1, 1.1)
+	}
+	100% {
+		transform: scale(1, 1)
+	}
+}
