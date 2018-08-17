@@ -10,7 +10,6 @@ function getRandomNumber(max) {
 function togglePlaybackAnimation() {
   playButton.classList.toggle('display-none')
   playing.forEach(element => {
-    console.log('foreaching')
     element.classList.toggle('display-none')
   })
 }
