@@ -1,4 +1,4 @@
-var numberOfTracks = 6;
+var numberOfTracks = 11;
 var isPlaying = false;
 var playButton = document.querySelector('.play');
 var playing = document.querySelectorAll('.playing')
@@ -19,7 +19,7 @@ function playAudio() {
   if (!isPlaying) {
     togglePlaybackAnimation()
     var trackNumber = getRandomNumber(numberOfTracks);
-    var audio = new Audio(`./audio/0${trackNumber}.wav`);
+    var audio = new Audio(`./audio/0${trackNumber}.mp3`);
     audio.play();
     isPlaying = true;
   }
