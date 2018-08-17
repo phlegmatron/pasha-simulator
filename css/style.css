@@ -12,6 +12,7 @@ body {
   width: 800px;
   min-height: 100vmin;
   background-color: rgba(32, 33, 35, 0.5);
+  filter: blur(5px);
 }
 
 .wrapper {
