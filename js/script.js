@@ -19,7 +19,8 @@ function playAudio() {
   if (!isPlaying) {
     togglePlaybackAnimation()
     var trackNumber = getRandomNumber(numberOfTracks);
-    var audio = new Audio(`./audio/0${trackNumber}.mp3`);
+    if (trackNumber < 10) trackNumber = '0' + trackNumber
+    var audio = new Audio(`./audio/${trackNumber}.mp3`);
     audio.play();
     isPlaying = true;
   }
