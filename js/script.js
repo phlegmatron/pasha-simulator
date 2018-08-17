@@ -10,8 +10,8 @@ function playAudio() {
     var trackNumber = getRandomNumber(numberOfTracks);
     var audio = new Audio(`./audio/0${trackNumber}.wav`);
     audio.crossOrigin = "anonymous";
-    analyze(audio);
     audio.play();
+    analyze(audio);
     isPlaying = true;
   }
   audio.onended = () => {
