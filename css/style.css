@@ -57,6 +57,21 @@ body {
   transform: scale(0.9, 0.9);
 }
 
+.playing {
+  animation-name: playing-animation;
+  animation-direction: alternate;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.playing:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.playing:last-of-type {
+  animation-delay: 0.4s;
+}
+
 @keyframes bubble-animation {
 	from {
 		transform: scale(1, 1)
@@ -64,4 +79,17 @@ body {
 	to {
 		transform: scale(1.1, 1.1)
 	}
+}
+
+@keyframes playing-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.display-none {
+  display: none;
 }
