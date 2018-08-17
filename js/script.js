@@ -14,8 +14,5 @@ function playAudio() {
   }
   audio.onended = () => {
     isPlaying = false;
-    // trackNumber = getRandomNumber(filesNumber);
-    // audio.setAttribute('src', `./audio/0${trackNumber}.wav`);
-    // audio.load()
   }
 }
