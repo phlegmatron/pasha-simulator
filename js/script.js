@@ -1,10 +1,5 @@
-var filesNumber = 6
-
-var trackNumber = getRandomNumber(filesNumber);
+var numberOfTracks = 6;
 var isPlaying = false;
-audio.setAttribute('src', `./audio/0${trackNumber}.wav`);
-
-body.appendChild(audio);
 
 function getRandomNumber(max) {
   return Math.floor(Math.random() * (max - 1)) + 1;
@@ -12,13 +7,15 @@ function getRandomNumber(max) {
 
 function playAudio() {
   if (!isPlaying) {
+    var trackNumber = getRandomNumber(numberOfTracks);
+    var audio = new Audio(`./audio/0${trackNumber}.wav`);
     audio.play();
     isPlaying = true;
   }
   audio.onended = () => {
     isPlaying = false;
-    trackNumber = getRandomNumber(filesNumber);
-    audio.setAttribute('src', `./audio/0${trackNumber}.wav`);
-    audio.load()
+    // trackNumber = getRandomNumber(filesNumber);
+    // audio.setAttribute('src', `./audio/0${trackNumber}.wav`);
+    // audio.load()
   }
 }
